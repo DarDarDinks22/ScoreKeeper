@@ -19,8 +19,6 @@ function updateScores(player, opponent) {
         player.score += 1;
         if (player.score === winningScore) {
             isGameOver = true;
-            player.display.classList.add('has-text-success');
-            opponent.display.classList.add('has-text-danger');
             player.button.disabled = true;
             opponent.button.disabled = true;
         }
@@ -49,7 +47,6 @@ function reset() {
     for (let p of [p1, p2]) {
         p.score = 0;
         p.display.textContent = 0;
-        p.display.classList.remove('has-text-success', 'has-text-danger');
         p.button.disabled = false;
     }
 }
